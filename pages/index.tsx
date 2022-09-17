@@ -3,12 +3,13 @@ import { Logo } from '@yek-plus/panel.layout.logo'
 import { Section } from '@yek-plus/panel.layout.section'
 import { Statistic } from '@yek-plus/panel.ui.statistic'
 import type { NextPage } from 'next'
-import Layout from '../layout'
+import useAuth from '../api/useAuth'
+import Layout from '../containers/layout'
 
 const Home: NextPage = () => {
+  useAuth();
   return (
     <Layout title='Dashboard' subtitle='This is the dashboard page'>
-
       <div className="flex flex-wrap xl:flex-nowrap gap-4">
         <div className="xl:w-auto flex w-full h-full">
           <Section fill>

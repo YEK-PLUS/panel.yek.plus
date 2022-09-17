@@ -10,11 +10,13 @@ type LayoutProps = {
 
 const Layout = ({ children, title, subtitle }: LayoutProps) => {
     return (
-        <div className="container mx-auto shadow-lg rounded-xl overflow-hidden my-8 p-1 flex bg-[#f1f1f1]">
-            <div className="w-1/6 bg-white rounded-xl">
-                <LeftBar />
+        <div className="container mx-auto shadow-lg rounded-xl overflow-hidden my-8 flex bg-[#f1f1f1]">
+            <div className="w-1/5 p-1 rounded-xl overflow-hidden bg-[#5bb4ba] bg-opacity-30">
+                <div className="bg-white h-full rounded-xl">
+                    <LeftBar />
+                </div>
             </div>
-            <div className="flex-1 flex flex-col py-2 px-8 gap-4">
+            <div className="flex-1 flex flex-col py-3 px-8 gap-4">
                 <TopBar />
                 <hr />
                 <Section>
@@ -23,8 +25,10 @@ const Layout = ({ children, title, subtitle }: LayoutProps) => {
                 </Section>
                 {children}
             </div>
-            <div className="w-1/4 bg-white rounded-xl">
-                test
+            <div className="w-1/4 p-1 rounded-xl overflow-hidden bg-opacity-30">
+                <div className="bg-white h-full rounded-xl">
+                    test
+                </div>
             </div>
         </div>
     )
