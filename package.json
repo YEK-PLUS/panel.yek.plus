@@ -15,6 +15,7 @@
     "@yek-plus/panel.layout.navigation": "^0.0.2",
     "@yek-plus/panel.layout.section": "^0.0.6",
     "@yek-plus/panel.layout.user-line": "^0.0.1",
+    "@yek-plus/panel.ui.card": "^0.0.1",
     "@yek-plus/panel.ui.statistic": "^0.0.3",
     "jsonwebtoken": "^8.5.1",
     "next": "12.3.0",

@@ -497,6 +497,14 @@
     core-js "^3.0.0"
     styled-components "5.3.5"
 
+"@yek-plus/panel.ui.card@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bit.cloud/@yek-plus/panel.ui.card/-/@yek-plus-panel.ui.card-0.0.1.tgz#a883f77774dde7c10c9b74a46bf1a90b13cc4c2a"
+  integrity sha1-qIP3d3Td58EMm3Ska/GpCxPMTCo=
+  dependencies:
+    core-js "^3.0.0"
+    styled-components "5.3.5"
+
 "@yek-plus/panel.ui.statistic@^0.0.3":
   version "0.0.3"
   resolved "https://node.bit.cloud/@yek-plus/panel.ui.statistic/-/@yek-plus-panel.ui.statistic-0.0.3.tgz#a156f78b46efd5e5f2e3f685da0a00ba0cb38d35"
