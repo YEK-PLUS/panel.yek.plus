@@ -6,6 +6,7 @@ const {
     FIREBASE_project_id,
     FIREBASE_private_key,
     FIREBASE_client_email,
+    FIREBASE_database_url,
   },
 }: { serverRuntimeConfig: { [key: string]: string } } = getConfig();
 
@@ -17,7 +18,7 @@ if (!admin.apps.length) {
         privateKey: FIREBASE_private_key,
         clientEmail: FIREBASE_client_email,
       }),
-      databaseURL: `https://${FIREBASE_project_id}.firebaseio.com`,
+      databaseURL: `https://${FIREBASE_database_url}.firebaseio.com`,
     });
   } catch (error: any) {
     console.log("Firebase admin initialization error", error.stack);

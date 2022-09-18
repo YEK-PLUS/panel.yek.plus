@@ -19,6 +19,7 @@ const nextConfig = {
     FIREBASE_token_uri: process.env.FIREBASE_token_uri,
     FIREBASE_auth_provider_x509_cert_url: process.env.FIREBASE_auth_provider_x509_cert_url,
     FIREBASE_client_x509_cert_url: process.env.FIREBASE_client_x509_cert_url,
+    FIREBASE_database_url: process.env.FIREBASE_database_url,
   },
 }
 
