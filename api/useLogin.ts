@@ -1,20 +1,14 @@
 import useSwr from "swr";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
+import { post } from "./fetcher";
 import Cookies from "universal-cookie";
-import getConfig from "next/config";
-
-const {
-  publicRuntimeConfig: { API_URL },
-}: {
-  publicRuntimeConfig: { API_URL: string };
-} = getConfig();
 
 const useLogin = () => {
   const [token, setToken] = useState<string | undefined>("");
   const router = useRouter();
-  const cookies = useMemo(() => new Cookies(), []);
   const [error, setError] = useState<string | undefined>("");
+  const cookies = useMemo(() => new Cookies(), []);
   useEffect(() => {
     const queryToken = router.query.token;
     if (queryToken) {
@@ -24,13 +18,7 @@ const useLogin = () => {
     }
   }, [router]);
   const { data } = useSwr(token ? "/user/login" : null, () =>
-    fetch(API_URL + "/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ token }),
-    }).then((r) => r.json())
+    post("/login", { token })
   );
 
   useEffect(() => {
