@@ -17,9 +17,11 @@ if (!admin.apps.length) {
         privateKey: FIREBASE_private_key,
         clientEmail: FIREBASE_client_email,
       }),
+      databaseURL: `https://${FIREBASE_project_id}.firebaseio.com`,
     });
   } catch (error: any) {
     console.log("Firebase admin initialization error", error.stack);
   }
 }
 export default admin.firestore();
+export const realtime = admin.database();
