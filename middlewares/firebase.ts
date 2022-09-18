@@ -18,7 +18,7 @@ if (!admin.apps.length) {
         privateKey: FIREBASE_private_key,
         clientEmail: FIREBASE_client_email,
       }),
-      databaseURL: `https://${FIREBASE_database_url}.firebaseio.com`,
+      databaseURL: FIREBASE_database_url,
     });
   } catch (error: any) {
     console.log("Firebase admin initialization error", error.stack);
