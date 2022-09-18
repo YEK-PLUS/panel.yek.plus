@@ -1,4 +1,5 @@
 import { Section } from "@yek-plus/panel.layout.section"
+import { Copyright } from "@yek-plus/panel.layout.copyright"
 import LeftBar from "./left-bar"
 import TopBar from "./top-bar"
 
@@ -16,7 +17,7 @@ const Layout = ({ children, title, subtitle }: LayoutProps) => {
                     <LeftBar />
                 </div>
             </div>
-            <div className="flex-1 flex flex-col py-3 px-8 gap-4">
+            <div className="w-3/5 flex flex-col py-3 px-8 gap-4">
                 <TopBar />
                 <hr />
                 <Section>
@@ -25,9 +26,11 @@ const Layout = ({ children, title, subtitle }: LayoutProps) => {
                 </Section>
                 {children}
             </div>
-            <div className="w-1/4 p-1 rounded-xl overflow-hidden bg-opacity-30">
-                <div className="bg-white h-full rounded-xl">
-                    test
+            <div className="w-1/5 p-1 rounded-xl overflow-hidden bg-opacity-30">
+                <div className="bg-white h-full flex flex-col rounded-xl">
+                    <div className="p-2 mt-auto">
+                        <Copyright appName="PANEL" />
+                    </div>
                 </div>
             </div>
         </div>
