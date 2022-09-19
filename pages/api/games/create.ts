@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { withJWT } from "../../../middlewares/withJWT";
-import db from "../../../middlewares/firebase";
+import db, { realtime } from "../../../middlewares/firebase";
 
 export type Data = {
   success: boolean;
@@ -8,22 +8,28 @@ export type Data = {
 };
 
 const Create = (req: NextApiRequest, res: NextApiResponse<Data>) => {
-  const { title, startTime, endTime, code, prize, maxTry } = req.body;
+  const { title, startTime, endTime, code, prize, maxTry, sponsor } = req.body;
+  const game = {
+    title,
+    startTime: new Date(startTime),
+    endTime: new Date(endTime),
+    code,
+    prize,
+    maxTry,
+    gid: Math.floor(Math.random() * 1000000000),
+    winner: "",
+    passPrize: false,
+    isPaid: false,
+    sponsor,
+  };
   db.collection("games")
-    .add({
-      title,
-      startTime: new Date(startTime),
-      endTime: new Date(endTime),
-      code,
-      prize,
-      maxTry,
-      gid: Math.floor(Math.random() * 1000000000),
-      winner: "",
-      passPrize: false,
-      isPaid: false,
-    })
+    .add(game)
     .then(() => {
       res.status(200).json({ success: true, message: "Game created" });
+      realtime.ref("games/" + game.gid).set({
+        isFinished: false,
+        tries: 0,
+      });
     })
     .catch((err) => {
       res.status(500).json({ success: false, message: err.message });

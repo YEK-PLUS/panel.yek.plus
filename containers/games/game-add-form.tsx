@@ -16,6 +16,7 @@ const GameAddForm = () => {
             code: model.code,
             prize: model.prize,
             maxTry: model.maxTry,
+            sponsor: model.sponsor,
         }
         const res = await createGame(game);
         if (res) {
@@ -43,8 +44,6 @@ const GameAddForm = () => {
         },
         code: {
             type: Number,
-            min: 1000,
-            max: 999999,
             optional: true,
         },
         prize: {
@@ -54,6 +53,32 @@ const GameAddForm = () => {
         maxTry: {
             type: Number,
             min: 0,
+        },
+        sponsor: {
+            type: Object,
+            optional: true,
+        },
+        'sponsor.url': {
+            type: String,
+            custom: function () {
+                if (!this.value.startsWith("http")) {
+                    return {
+                        type: 'custom',
+                        message: 'URL must start with http',
+                    };
+                }
+            }
+        },
+        'sponsor.logo': {
+            type: String,
+            custom: function () {
+                if (!this.value.startsWith("http")) {
+                    return {
+                        type: 'custom',
+                        message: 'URL must start with http',
+                    };
+                }
+            }
         },
     });
     return (
