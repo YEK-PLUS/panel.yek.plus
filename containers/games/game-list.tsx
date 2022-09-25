@@ -4,9 +4,6 @@ import useGames from "../../api/useGames";
 
 const GameList = () => {
     const { data } = useGames();
-    const payAction = () => {
-        console.log("pay")
-    }
     return (
         <Section>
             <h1 className="text-2xl font-bold mb-4">Games</h1>
