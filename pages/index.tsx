@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         </div>
         <div className="flex-1 h-full flex">
           <Section fill>
-            <Logo appName="ADMIN" />
+            <Logo appName="OLDU!" />
           </Section>
         </div>
       </div>

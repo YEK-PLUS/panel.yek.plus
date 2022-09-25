@@ -17,7 +17,7 @@ const LeftBar = () => {
     }, [currentPath, router])
     return <div className="p-2 flex flex-col gap-4">
         <div className="h-[60px]">
-            <Logo appName="ADMIN" />
+            <Logo appName="OLDU!" />
         </div>
         <hr />
         <div className="flex flex-col gap-4 px-4 py-2">
