@@ -3,12 +3,19 @@ import { Breadcrumb, BreadcrumbProps } from "@yek-plus/panel.layout.breadcrumb"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import { Section } from "@yek-plus/panel.layout.section"
 
-const TopBar = () => {
+const TopBar = ({
+    children,
+    title,
+    subtitle,
+}: {
+    children?: React.ReactNode
+    title: string
+    subtitle?: string
+}) => {
     const router = useRouter()
     const [breadcrumb, setBreadcrumb] = useState<BreadcrumbProps["items"]>([])
-    const [nextAvailable, setNextAvailable] = useState(false)
-    const [previousAvailable, setPreviousAvailable] = useState(false)
     useEffect(() => {
         const items = [{
             title: "Home",
@@ -20,21 +27,21 @@ const TopBar = () => {
             url: `/${item}`
         }))
         setBreadcrumb(items)
-
-        setPreviousAvailable(window.history.length > 1)
     }, [router])
-    const handleBack = () => router.back()
 
-    return <div className="w-full h-[70px] px-[10px] flex flex-col">
-        <div className="h-[10px]"></div>
-        <div className="pt-[20px] h-[60px] flex-full">
+    return <div className="w-full p-2 flex flex-col gap-4">
+        <div className="h-[60px] flex flex-col justify-between">
+            <h1 className="text-2xl font-bold">{title}
+                <span className="ml-2 text-sm text-gray-500">{subtitle}</span>
+            </h1>
             <div className="w-full flex flex-row items-center justify-between gap-4">
                 <Breadcrumb items={breadcrumb} wrapper={
                     ({ url, children }) => <Link href={url}>{children}</Link>
                 } />
-                <Navigation nextAvailable={nextAvailable} previousAvailable={previousAvailable} onPressPrevious={handleBack} />
             </div>
         </div>
+        <hr />
+        {children}
     </div>
 }
 export default TopBar
