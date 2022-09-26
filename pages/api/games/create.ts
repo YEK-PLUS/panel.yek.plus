@@ -20,7 +20,7 @@ const Create = (req: NextApiRequest, res: NextApiResponse<Data>) => {
     winner: "",
     passPrize: false,
     isPaid: false,
-    sponsor,
+    sponsor: sponsor || null,
   };
   db.collection("games")
     .add(game)
