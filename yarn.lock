@@ -418,6 +418,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/lodash@^4.14.186":
+  version "4.14.186"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.186.tgz#862e5514dd7bd66ada6c70ee5fce844b06c8ee97"
+  integrity sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==
+
 "@types/meteor@*":
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/@types/meteor/-/meteor-2.7.1.tgz#654e7bf074496a61462db84ecf2f8700856e4525"
@@ -601,6 +606,16 @@
     core-js "^3.0.0"
     styled-components "5.3.5"
 
+"@yek-plus/panel.ui.button@^0.0.5":
+  version "0.0.5"
+  resolved "https://node.bit.cloud/@yek-plus/panel.ui.button/-/@yek-plus-panel.ui.button-0.0.5.tgz#0d42ef217a21203457e0dd51afade253fce27b3c"
+  integrity sha1-DULvIXohIDRX4N1Rr63iU/ziezw=
+  dependencies:
+    "@yek-plus/panel.utils.theme" "0.0.1"
+    "@yek-plus/panel.utils.variants" "0.0.1"
+    core-js "^3.0.0"
+    styled-components "5.3.5"
+
 "@yek-plus/panel.ui.card@^0.0.6":
   version "0.0.6"
   resolved "https://node.bit.cloud/@yek-plus/panel.ui.card/-/@yek-plus-panel.ui.card-0.0.6.tgz#3623671580c36bea97b049facddc85ac697ce94f"
@@ -619,6 +634,16 @@
     uniforms "3.10.0"
     uniforms-antd "3.10.0"
 
+"@yek-plus/panel.ui.icon-button@^0.0.3":
+  version "0.0.3"
+  resolved "https://node.bit.cloud/@yek-plus/panel.ui.icon-button/-/@yek-plus-panel.ui.icon-button-0.0.3.tgz#f976de1c73631bc94d379ae13abc1a55bc80348a"
+  integrity sha1-+XbeHHNjG8lNN5rhOrwaVbyANIo=
+  dependencies:
+    "@yek-plus/panel.utils.theme" "0.0.1"
+    "@yek-plus/panel.utils.variants" "0.0.1"
+    core-js "^3.0.0"
+    styled-components "5.3.5"
+
 "@yek-plus/panel.ui.statistic@^0.0.3":
   version "0.0.3"
   resolved "https://node.bit.cloud/@yek-plus/panel.ui.statistic/-/@yek-plus-panel.ui.statistic-0.0.3.tgz#a156f78b46efd5e5f2e3f685da0a00ba0cb38d35"
@@ -634,6 +659,16 @@
   dependencies:
     core-js "^3.0.0"
     styled-components "5.3.5"
+
+"@yek-plus/panel.utils.theme@0.0.1", "@yek-plus/panel.utils.theme@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bit.cloud/@yek-plus/panel.utils.theme/-/@yek-plus-panel.utils.theme-0.0.1.tgz#44d3bdf5766e6738b8f718ae032cf2faeb005366"
+  integrity sha1-RNO99XZuZzi49xiuAyzy+usAU2Y=
+
+"@yek-plus/panel.utils.variants@0.0.1", "@yek-plus/panel.utils.variants@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bit.cloud/@yek-plus/panel.utils.variants/-/@yek-plus-panel.utils.variants-0.0.1.tgz#2c442e31aafb1333904208fbc16659408dfc3871"
+  integrity sha1-LEQuMar7EzOQQgj7wWZZQI38OHE=
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -3135,6 +3170,11 @@ swr@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/swr/-/swr-1.3.0.tgz#c6531866a35b4db37b38b72c45a63171faf9f4e8"
   integrity sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==
+
+tailwind-scrollbar@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tailwind-scrollbar/-/tailwind-scrollbar-2.0.1.tgz#f08721173d513f1406a44601640b79726e3f9728"
+  integrity sha512-OcR7qHBbux4k+k6bWqnEQFYFooLK/F4dhkBz6nvswIoaA9ancZ5h20e0tyV7ifSWLDCUBtpG+1NHRA8HMRH/wg==
 
 tailwindcss@^3.1.8:
   version "3.1.8"
