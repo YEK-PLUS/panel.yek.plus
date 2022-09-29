@@ -31,9 +31,9 @@ const LeftBar = () => {
                     <MenuButton title="Projects" icon={<RocketLaunchIcon />} active={currentPath === "projects"} />
                 </a>
             </Link>
-            <Link href={"/cards"}>
+            <Link href={"/users"}>
                 <a className="flex flex-col">
-                    <MenuButton title="Cards" icon={<CreditCardIcon />} active={currentPath === "cards"} />
+                    <MenuButton title="Users" icon={<CreditCardIcon />} active={currentPath === "users"} />
                 </a>
             </Link>
             <Link href={"/invoices"}>
