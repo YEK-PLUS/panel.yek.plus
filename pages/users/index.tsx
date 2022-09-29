@@ -4,7 +4,7 @@ import UserList from '../../containers/users/user-list'
 
 const Users: NextPage = () => {
     return (
-        <Layout title='Games' subtitle='List of games'>
+        <Layout title='Users' subtitle='List of users'>
             <div className='flex flex-col gap-4'>
                 <div className="flex flex-col gap-4">
                     <UserList />
