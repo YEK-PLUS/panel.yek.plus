@@ -22,7 +22,8 @@ const UserEdit = () => {
         if (id) {
             const res = await update(id, user);
             if (!res.error) {
-                mutate(`/api/users`);
+                mutate(`/api/user`);
+                mutate(`/api/user/${id}`);
                 router.push("/users");
             }
             else {
