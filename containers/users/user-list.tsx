@@ -57,7 +57,8 @@ const UserList = () => {
                 actions={[
                     {
                         icon: <LockClosedIcon />,
-                        onClick: ChangePassword
+                        onClick: ChangePassword,
+                        theme: 'secondary',
                     },
                 ]}
             />
