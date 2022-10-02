@@ -15,7 +15,7 @@ export const fetcher: Fetcher = async (url) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Cookie: `token=${cookies.get("token")}`,
+      Authorization: `Bearer ${cookies.get("token")}`,
     },
   });
   return await res.json();
@@ -26,7 +26,7 @@ export const post: Fetcher = async (url, data) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Cookie: `token=${cookies.get("token")}`,
+      Authorization: `Bearer ${cookies.get("token")}`,
     },
     body: JSON.stringify(data),
   });
@@ -38,7 +38,7 @@ export const get: Fetcher = async (url, data) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Cookie: `token=${cookies.get("token")}`,
+      Authorization: `Bearer ${cookies.get("token")}`,
     },
     body: JSON.stringify(data),
   });
@@ -50,7 +50,7 @@ export const _delete: Fetcher = async (url, data) => {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-      Cookie: `token=${cookies.get("token")}`,
+      Authorization: `Bearer ${cookies.get("token")}`,
     },
     body: JSON.stringify(data),
   });
@@ -62,7 +62,7 @@ export const patch: Fetcher = async (url, data) => {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
-      Cookie: `token=${cookies.get("token")}`,
+      Authorization: `Bearer ${cookies.get("token")}`,
     },
     body: JSON.stringify(data),
   });
