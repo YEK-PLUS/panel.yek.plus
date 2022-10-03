@@ -7,10 +7,9 @@ import loginCheck from "./actions/auth/login-check";
 
 const useAuth = () => {
   const router = useRouter();
-  const { data, error } = useSWR("/user/auth", loginCheck);
+  const { data } = useSWR("/user/auth", loginCheck);
+  const error = data?.error;
   useEffect(() => {
-    console.log(data);
-    
     if (data && data.error) {
       router.push("/login");
     }

@@ -4,12 +4,12 @@ import Layout from '../../containers/layout'
 import ProjectCreate from '../../containers/projects/project-create'
 
 const Projects: NextPage = () => {
-    useAuth();
+    const { loading, error } = useAuth();
     return (
         <Layout title='Games' subtitle='List of games'>
             <div className='flex flex-col gap-4'>
                 <div className="flex flex-col gap-4">
-                    <ProjectCreate />
+                    {!loading && !error && <ProjectCreate />}
                 </div>
             </div>
         </Layout>
