@@ -18,9 +18,8 @@ const ProjectUsersAdd = () => {
             const userIds = data.filter((u) => usernames.includes(u.username)).map((u) => u.id);
             const res = await addUser(router.query.id as string, userIds);
             if (!res.error) {
-                // mutate(`/api/project`);
-                // router.push("/projects");
-                alert("User added to project");
+                mutate(`/api/project/${router.query.id}`);
+                router.push(`/projects/${router.query.id}/users`);
             }
             else {
                 alert(res.error);
