@@ -1,6 +1,6 @@
 import { Logo } from "@yek-plus/panel.layout.logo"
 import { MenuButton } from "@yek-plus/panel.layout.menu-button"
-import { HomeIcon, BanknotesIcon, RocketLaunchIcon, UsersIcon } from "@heroicons/react/20/solid"
+import { HomeIcon, Square3Stack3DIcon, RocketLaunchIcon, UsersIcon } from "@heroicons/react/20/solid"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Link from "next/link"
@@ -34,6 +34,11 @@ const LeftBar = () => {
             <Link href={"/users"}>
                 <a className="flex flex-col">
                     <MenuButton title="Users" icon={<UsersIcon />} active={currentPath === "users"} />
+                </a>
+            </Link>
+            <Link href={"/project-types"}>
+                <a className="flex flex-col">
+                    <MenuButton title="Project Types" icon={<Square3Stack3DIcon />} active={currentPath === "project-types"} />
                 </a>
             </Link>
         </div>
