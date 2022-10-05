@@ -6,7 +6,7 @@ import _delete from "../../api/actions/project/delete";
 import { useRouter } from "next/router";
 import useProjects from "../../api/useProjects";
 import { Project } from "../../types/project";
-import { UsersIcon } from "@heroicons/react/20/solid";
+import { UsersIcon, Cog6ToothIcon } from "@heroicons/react/20/solid";
 const ProjectList = () => {
     const { data, mutate } = useProjects();
     const router = useRouter();
@@ -21,6 +21,9 @@ const ProjectList = () => {
     }
     const Edit = (project: Project) => {
         router.push(`/projects/${project.id}`);
+    }
+    const GoProjectConfig = (project: Project) => {
+        router.push(`/projects/${project.id}/config`);
     }
     const GoAssignedUsers = (project: Project) => {
         router.push(`/projects/${project.id}/users`);
@@ -45,6 +48,10 @@ const ProjectList = () => {
                     key: 'description',
                 },
                 {
+                    label: 'Type',
+                    key: 'ProjectType.name',
+                },
+                {
                     label: 'Email',
                     key: 'email',
                 },
@@ -52,6 +59,11 @@ const ProjectList = () => {
                 onDelete={Delete}
                 onEdit={Edit}
                 actions={[
+                    {
+                        icon: <Cog6ToothIcon />,
+                        onClick: GoProjectConfig,
+                        theme: 'primary-outline',
+                    },
                     {
                         icon: <UsersIcon />,
                         onClick: GoAssignedUsers,
