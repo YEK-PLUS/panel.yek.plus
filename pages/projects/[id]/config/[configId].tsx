@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import useAuth from '../../../../../api/useAuth';
-import Layout from '../../../../../containers/layout'
-import ProjectConfigConstantEdit from '../../../../../containers/projects/project-config-constant-edit'
+import useAuth from '../../../../api/useAuth';
+import Layout from '../../../../containers/layout'
+import ProjectConfigConstantEdit from '../../../../containers/projects/project-config-edit'
 
 const Projects: NextPage = () => {
     const { loading, error } = useAuth();

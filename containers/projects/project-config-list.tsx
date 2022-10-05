@@ -49,21 +49,6 @@ const ProjectConfigList = () => {
             ]} data={config}
                 onEdit={EditConfig}
             />
-            <div className="flex flex-row justify-between items-center mb-4">
-                <h1 className="text-2xl font-bold">Project Values</h1>
-            </div>
-            <Table columns={[
-                {
-                    label: 'Label',
-                    key: 'label',
-                },
-                {
-                    label: 'Value',
-                    key: 'value',
-                },
-            ]} data={values}
-                onEdit={EditConfig}
-            />
         </Section>
     )
 }
