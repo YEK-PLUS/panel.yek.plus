@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import useAuth from '../api/useAuth'
+import useAuth from '../hooks/useAuth'
 import Layout from '../containers/layout'
 import HistoryTable from '../containers/history/table'
 

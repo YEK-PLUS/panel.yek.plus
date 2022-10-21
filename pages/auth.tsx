@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import useLogin from '../api/useLogin'
+import useLogin from '../hooks/useLogin'
 import AuthLayout from '../containers/layout/auth'
 
 const Auth: NextPage = () => {

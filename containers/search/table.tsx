@@ -2,13 +2,13 @@ import "antd/dist/antd.css";
 import { Section } from '@yek-plus/panel.layout.section';
 import { Table } from "@yek-plus/panel.ui.table";
 import { useRouter } from "next/router";
-import useSearch from "../../api/useSearch";
+import useSearch from "../../hooks/useSearch";
 import { SearchResponse } from "../../types/search-response";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { IconButton } from "@yek-plus/panel.ui.icon-button";
 import { useState } from "react";
-import favoriteSearch from "../../api/favorite-search";
-import favoriteProduct from "../../api/favorite-product";
+import favoriteSearch from "../../hooks/favorite-search";
+import favoriteProduct from "../../hooks/favorite-product";
 
 const SearchTable = () => {
     const router = useRouter();

@@ -3,8 +3,8 @@ import { Section } from '@yek-plus/panel.layout.section';
 import { Table } from "@yek-plus/panel.ui.table";
 import { useRouter } from "next/router";
 import { ForwardIcon } from "@heroicons/react/20/solid";
-import removeProduct from "../../api/remove-product";
-import useProducts from "../../api/useProducts";
+import removeProduct from "../../hooks/remove-product";
+import useProducts from "../../hooks/useProducts";
 
 const ProductTable = () => {
     const router = useRouter();

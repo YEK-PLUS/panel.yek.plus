@@ -2,7 +2,7 @@ import "antd/dist/antd.css";
 import { Section } from '@yek-plus/panel.layout.section';
 import { Table } from "@yek-plus/panel.ui.table";
 import { useRouter } from "next/router";
-import useHistory from "../../api/useHistory";
+import useHistory from "../../hooks/useHistory";
 import { ForwardIcon } from "@heroicons/react/20/solid";
 
 const HistoryTable = () => {

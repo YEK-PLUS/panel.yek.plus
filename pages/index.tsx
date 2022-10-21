@@ -3,7 +3,7 @@ import { Logo } from '@yek-plus/panel.layout.logo'
 import { Section } from '@yek-plus/panel.layout.section'
 import { Statistic } from '@yek-plus/panel.ui.statistic'
 import type { NextPage } from 'next'
-import useAuth from '../api/useAuth'
+import useAuth from '../hooks/useAuth'
 import Layout from '../containers/layout'
 import SearchTable from '../containers/search/table'
 

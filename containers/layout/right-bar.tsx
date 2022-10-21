@@ -6,7 +6,7 @@ import { SimpleSchema2Bridge } from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import "antd/dist/antd.css";
 import { Section } from '@yek-plus/panel.layout.section';
-import useCountryList from "../../api/useCountryList";
+import useCountryList from "../../hooks/useCountryList";
 import { useRouter } from "next/router";
 // import useCategoryList from "../../api/useCategoryList";
 

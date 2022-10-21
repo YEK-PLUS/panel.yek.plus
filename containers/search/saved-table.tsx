@@ -3,8 +3,8 @@ import { Section } from '@yek-plus/panel.layout.section';
 import { Table } from "@yek-plus/panel.ui.table";
 import { useRouter } from "next/router";
 import { ForwardIcon } from "@heroicons/react/20/solid";
-import useSavedSearchs from "../../api/useSavedSearchs";
-import favoriteSearch from "../../api/favorite-search";
+import useSavedSearchs from "../../hooks/useSavedSearchs";
+import favoriteSearch from "../../hooks/favorite-search";
 
 const SavedSearchTable = () => {
     const router = useRouter();
