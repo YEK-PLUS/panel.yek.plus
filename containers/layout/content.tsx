@@ -21,9 +21,9 @@ const Content = ({
             title: "Home",
             url: "/"
         }]
-        router.asPath.split("/").filter(item => item !== "").map(item => items.push({
+        router.pathname.split("/").filter(item => item !== "").map(item => items.push({
             title: item.charAt(0).toUpperCase() + item.slice(1),
-            url: items[items.length - 1].url + "/" + item
+            url: `/${item}`
         }))
         setBreadcrumb(items)
     }, [router])

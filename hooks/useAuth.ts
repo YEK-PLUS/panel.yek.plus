@@ -9,7 +9,7 @@ const useAuth = () => {
   const { data, error } = useSWR("/user/auth", () => fetcher(""));
   useEffect(() => {
     if (data && !data.success) {
-      router.prefetch("/auth").then(() => router.push("/auth"));
+      router.push("/not-authorized");
     }
   }, [data, router]);
 
